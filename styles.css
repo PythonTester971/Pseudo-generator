@@ -1,0 +1,47 @@
+body {
+    min-width:320px;
+    text-align: justify;
+    text-justify: inter-word;
+    background-color:#ffffff;
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+    text-justify: inter-word;
+}
+
+h2 {
+    font-weight:600;
+}
+
+h2,p,form {
+    padding: 7px;
+}
+
+label,input,select,button {
+    display:block;
+}
+
+input,select {
+    margin-bottom:10px;
+}
+
+button {
+    background-color:rgb(8, 144, 8);
+    font-family:'Courier New', Courier, monospace;
+    color:#ffffff;
+    border-radius:0 50px 0 50px;
+    border:none;
+    height:30px;
+    width:200px;
+    margin-bottom:10px;
+    justify-self:center;
+}
+
+div {
+    border: solid 1px black;
+    width: 300px;
+    height:20px;
+}
+
