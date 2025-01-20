@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
     <title>JJWXC-type Pseudo generator</title>
 </head>
 <body>
@@ -14,17 +15,19 @@
     <p>
         Ce générateur composera ton nom d'auteur jjwxc... mais version française !<br>
         Si tu décides de laisser des champs de renseignement vide, un nom par défaut te sera attribué.<br>
-        Aucune des informations que tu saisiras ne sera conservées ni exploitées par le propriétaire du site !
+        Aucune des informations que tu saisiras ne sera conservée ni exploitée par le propriétaire du site !
     </p>
+
+    <button id="start">Créer mon pseudo !</button>
 
     <form>
 
-        <label for="user-name" id="label-name">Renseigne un nom (celui qui te plaît) :</label><br>
+        <label for="user-name" id="label-name">Renseigne un nom (celui qui te plaît) :</label>
         <input id="user-name" type="text"><br>
 
-        <label for="user-color" id="label-color">Sélectionne une couleur (ta préférée, si tu en as une) :</label><br>
+        <label for="user-color" id="label-color">Sélectionne une couleur (ta préférée, si tu en as une) :</label>
         <select id="user-color">
-            <option value=""></option>
+            <option value="none">Je ne souhaite pas choisir de couleur</option>
             <option value="white">Blanc</option>
             <option value="black">Noir</option>
             <option value="gray">Gris</option>
@@ -36,16 +39,23 @@
             <option value="orange">Orange</option>
             <option value="red">Rouge</option>
             <option value="pink">Rose</option>
-        </select><br>
+        </select>
 
-        <label for="user-action" id="label-action">Saisis une action ou une activité au présent de l'indicatif :</label><br>
+        <label for="user-action" id="label-action">
+            Saisis une action ou une activité à la 3ème personne de l'indicatif présent 
+            (ne mets pas de sujet) :
+        </label>
         <input id="user-action" type="text">
 
-    </form><br>
+    </form>
 
-    <button id="generate">Générer</button><br>
-    <div id="show-pseudo">Ton pseudo s'affiche ici</div>
+    <button id="generate">Générer</button>
 
-    
+    <label for="show-pseudo">Ton pseudo s'affiche ci-dessous :</label>
+    <div id="show-pseudo">
+        
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
