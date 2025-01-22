@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +8,76 @@
     <title>JJWXC-type Pseudo generator</title>
 </head>
 <body>
-<header></header>
-    <h1>Générateur de pseudo</h1>
+        <h1>Générateur de pseudonyme</h1>
 
-    <h2>Si t'es francophone et que tu veux imiter les pseudos d'auteurs de web novel de JJWXC...</h2>
+        <h2>
+            Si tu veux imiter les pseudos 
+            d'auteurs de web novel de JJWXC (version française)
+        </h2>
 
-    <p>
-        Ce générateur composera ton nom d'auteur jjwxc... mais version française !<br>
-        Si tu décides de laisser des champs de renseignement vide, un nom par défaut te sera attribué.<br>
-        Aucune des informations que tu saisiras ne sera conservée ni exploitée par le propriétaire du site !
-    </p>
+        <p>
+            Ce générateur composera ton nom d'auteur de webnovel chinoise
+            ... mais en version française !<br>
+            Si tu décides de laisser des champs de renseignement vide, 
+            un nom par défaut te sera attribué.<br>
+            Aucune des informations que tu saisiras ne sera conservée 
+            ni exploitée par le propriétaire du site !<br>
+        </p>
 
-    <button id="start">Créer mon pseudo !</button>
-
-    <form>
-
-        <label for="user-name" id="label-name">Renseigne un nom (celui qui te plaît) :</label>
-        <input id="user-name" type="text"><br>
-
-        <label for="user-color" id="label-color">Sélectionne une couleur (ta préférée, si tu en as une) :</label>
-        <select id="user-color">
-            <option value="none">Je ne souhaite pas choisir de couleur</option>
-            <option value="white">Blanc</option>
-            <option value="black">Noir</option>
-            <option value="gray">Gris</option>
-            <option value="brown">Marron</option>
-            <option value="purple">Violet</option>
-            <option value="blue">Bleu</option>
-            <option value="green">Vert</option>
-            <option value="yellow">Jaune</option>
-            <option value="orange">Orange</option>
-            <option value="red">Rouge</option>
-            <option value="pink">Rose</option>
-        </select>
-
-        <label for="user-action" id="label-action">
-            Saisis une action ou une activité à la 3ème personne de l'indicatif présent 
-            (ne mets pas de sujet) :
-        </label>
-        <input id="user-action" type="text">
-
-    </form>
-
-    <button id="generate">Générer</button>
-
-    <label for="show-pseudo">Ton pseudo s'affiche ci-dessous :</label>
-    <div id="show-pseudo">
+        <h3>Clique sur "Créer mon pseudo" pour commencer !</h3>
         
-    </div>
+        <button id="start">Créer mon pseudo !</button>
+
+    
+       <section id="content">
+        <form id="generation-form">
+
+            <label for="user-name" id="label-name">
+                Renseigne un nom qui commence par une majuscule :<br>
+                * ex : Guillaume
+            </label>
+            <input id="user-name" type="text"><br>
+            <!-- <button id="send-name" class="send">Go</button> -->
+        <!-- <div class="done" id="name-done"></div> -->
+
+            <label for="user-color" id="label-color">
+                Sélectionne une couleur ou l'option "Je ne souhaite pas choisir de couleur" :
+            </label>
+            <select id="user-color" required>
+                <option id="no-color" value="none">Je ne souhaite pas choisir de couleur</option>
+                <option id="white" value="blanc">Blanc</option>
+                <option id="black" value="noir">Noir</option>
+                <option id="gray" value="gris">Gris</option>
+                <option id="brown" value="marron">Marron</option>
+                <option id="purple" value="violet">Violet</option>
+                <option id="blue" value="bleu">Bleu</option>
+                <option id="green" value="vert">Vert</option>
+                <option id="yellow" value="jaune">Jaune</option>
+                <option id="orange" value="orange">Orange</option>
+                <option id="red" value="rouge">Rouge</option>
+                <option id="pink" value="rose">Rose</option>
+            </select>
+            <!-- <button id="send-color" class="send">Go</button> -->
+        <!-- <div class="done" id="color-done"></div> -->
+
+            <label for="user-action" id="label-action">
+                Saisis une action ou une activité à la 3ème personne (il/elle) 
+                de l'indicatif présent<br> 
+                <strong>(n'écris pas le sujet !)</strong> :<br>
+                * ex 1: s'envole vers le ciel immense; ex 2: mange un curry
+            </label>
+            <input id="user-action" type="text"><br>
+            <!-- <button id="send-action" class="send">Go</button> -->
+        <!-- <div class="done" id="action-done"></div> -->
+
+        </form>
+
+        <button id="generate" class="for-generation">Générer</button>
+
+    <p id="label-show">Ton pseudo s'affiche ci-dessous :</p>
+    <div id="show-pseudo"></div> 
+   </section>
+
 
     <script src="script.js"></script>
 </body>
